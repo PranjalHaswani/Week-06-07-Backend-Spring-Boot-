@@ -17,4 +17,8 @@ public class HelloController {
     public String UC3(@PathVariable("name") String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+    @PostMapping("hello/post")
+    public String UC4(@RequestBody UserDTO user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+    }
 }
